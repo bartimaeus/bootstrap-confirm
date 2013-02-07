@@ -15,17 +15,15 @@
             };
             
             var options = $.extend(defaults, options);
-            html = html.replace('#Heading#',options.heading).replace('#Body#',options.body);
+            html = html.replace('#Heading#', options.heading).replace('#Body#', options.body);
             $(this).html(html);
             $(this).modal('show');
             var context = $(this); 
-            $('#confirmYesBtn',this).click(function(){
-                if(options.callback!=null)
-                    options.callback();
+            $('#confirmYesBtn', this).click(function(ev) {
+                ev.preventDefault();
+                if (options.callback !== null) { options.callback(); }
                 $(context).modal('hide');
             });
         }
-
     });
-
 })(jQuery);
