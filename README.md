@@ -1,0 +1,1 @@
+This is a fork of bootstrap-confirm by superwalnut, http://confirmmodal.codeplex.com
